@@ -6,6 +6,7 @@ require "session.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Docume nt</title>
 </head>
 <body>
@@ -24,5 +25,11 @@ require "session.php";
 
     ?>
 	</div>
+=======
+    <title>Document</title>
+</head>
+<body>
+    Coba ya bang
+>>>>>>> 086ce412eb0a698ab008a5db6719a99073bc7ee9
 </body>
 </html>
