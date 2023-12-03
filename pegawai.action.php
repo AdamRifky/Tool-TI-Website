@@ -1,28 +1,41 @@
 <?php
 
-if ($_GET['action']=='add'){                //jika mode "add"
-    $id=$_GET['NIP'];
-    $nama=$_GET['NAMA_PEGAWAI'];
-    $alamat=$_GET['KODE_DIVISI'];
-    $query="insert into tb_Pegawai values(".$NIP.",'".$NAMA_PEGAWAI."','".$KODE_DIVISI."');";
-    //echo $query;
-    $mysqli = new mysqli("localhost", "root", "", "ayo_main");
-    $mysqli->query($query);
+if ($_POST['action'] == 'add'){                //jika mode "add"
+    $id = $_POST['NIP'];
+    $nama = isset($_POST['NAMA_PEGAWAI']) ? $_POST['NAMA_PEGAWAI'] : '';
+    $alamat = isset($_POST['KODE_DIVISI']) ? $_POST['KODE_DIVISI'] : '';
 
-}
-else if ($_GET['action']=='edit'){
-    $id=$_GET['NIP'];
-    $nama=$_GET['NAMA_PEGAWAI'];
-    $alamat=$_GET['KODE_DIVISI'];
-    $query="update tb_Pegawai set NAMA_PEGAWAI='".$NAMA_PEGAWAI."', KODE_DIVISI='".$KODE_DIVISI."' where NIP=".$NIP.";";
     $mysqli = new mysqli("localhost", "root", "", "ayo_main");
+    $query="INSERT INTO tb_pegawai VALUES('" . $id . "', '" . $nama . "', '" . $alamat . "', '');";
+    
+    echo $query;
+    $result = $mysqli->query($query);
+    
+    if (!$result) {
+        die("Error: " . $mysqli->error);
+    }
+
+    // $mysqli->query($query);
+
     $mysqli->query($query);
 }
-else if ($_GET['action']=='delete'){
-    $id=$_GET['NIP'];
-    $query="delete from tb_Pegawai where NIP=".$NIP.";";
+else if ($_POST['action'] == 'edit'){
+    $id = $_POST['NIP'];
+    $nama = isset($_POST['NAMA_PEGAWAI']) ? $_POST['NAMA_PEGAWAI'] : '';
+    $alamat = isset($_POST['KODE_DIVISI']) ? $_POST['KODE_DIVISI'] : '';
+    
     $mysqli = new mysqli("localhost", "root", "", "ayo_main");
-    $mysqli->query($query);
+    $query = "UPDATE tb_pegawai SET NAMA_PEGAWAI='" . $nama . "', KODE_DIVISI='" . $alamat . "' WHERE NIP='" . $id . "';";
+    
+    $result = $mysqli->query($query);
+}
+else if ($_POST['action'] == 'delete'){
+    $id = $_POST['NIP'];
+
+    $mysqli = new mysqli("localhost", "root", "", "ayo_main");
+    $query = "DELETE FROM tb_pegawai WHERE NIP ='" . $id . "';";
+    
+    $result = $mysqli->query($query);
 }
 
 header('Location: index.php?page=pegawai');
