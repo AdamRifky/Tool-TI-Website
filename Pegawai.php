@@ -30,13 +30,13 @@
           echo "</td>";
           
           echo "<td>";
-            echo "<a class='btn btn-primary me-md-2 btn-sm' href='index.php?page=pegawai.form&NIP=".$row['NIP']."&action=edit'>Edit</a>";
+            echo "<a class='btn btn-primary me-md-2 btn-sm' href='index.php?page=pegawai.form&NIP=".$row['NIP']."&action=edit'>Perbarui</a>";
             
             // echo "<a class='btn btn-danger me-md-2 btn-sm' href='Pegawai.action.php?NIP=".$row['NIP']."&action=delete'>Delete</a>";
             echo "<form action='pegawai.action.php' method='POST' style ='display:inline;'>";
               echo "<input type='hidden' name='NIP' value='" . $row['NIP'] . "'>";
               echo "<input type='hidden' name='action' value='delete'>";
-              echo "<button type='submit' class='btn btn-danger me-md-2 btn-sm' onclick='return confirm(\"Ingin menghapus data ini?\");'>Delete</button>";
+              echo "<button type='submit' class='btn btn-danger me-md-2 btn-sm' onclick='return confirm(\"Ingin menghapus data ini?\");'>Hapus</button>";
             echo "</form>";
           echo "</td>";
         
