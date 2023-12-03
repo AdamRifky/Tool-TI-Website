@@ -1,6 +1,5 @@
 <main class="d-flex flex-nowrap">
-    <h1 class="visually-hidden">Sidebars examples</h1>
-
+    <!-- <h1 class="visually-hidden">Sidebars examples</h1> -->
     <div class="flex-shrink-0 p-3" style="width: 220px;">
         <!--<a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
 	  <svg class="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
@@ -38,22 +37,21 @@
                 </button>
                 <div class="collapse" id="orders-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="index.php?page=booking" class="link-body-emphasis d-inline-flex text-decoration-none rounded">booking</a></li>
-                        <li><a href="index.php?page=pesanan" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Pesanan</a></li>
+                        <li><a href="index.php?page=ordered" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Ordered</a></li>
+                        <li><a href="index.php?page=returned" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
                     </ul>
                 </div>
             </li>
             <li class="border-top my-3"></li>
             <li class="mb-1">
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                    Account
+                    <?php echo $_SESSION['username']; ?>
                 </button>
                 <div class="collapse" id="account-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
                         <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>
+                        <li><a href="logout.php" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li>
                     </ul>
                 </div>
             </li>

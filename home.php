@@ -32,20 +32,36 @@
       color: #008000;
     }
 
-    section:not(:first-child) {
-      margin-bottom: 30px;
-    }
-
     .card img {
       margin-top: 10px;
       height: 250px;
       width: 100%;
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      color: #333;
+      white-space: nowrap;
+    }
+
+    .overlay-text.large {
+      font-size: 5rem;
+      text-align: center;
+    }
+
+    .overlay-text.small {
+      font-size: 3rem;
+      text-align: center;
     }
   </style>
 </head>
 
 <body style="background-color: #f2f2f2;">
 
+  <!-- buat navbar -->
   <section class="bg-white navbar-light shadoe-sm">
     <div class="container">
       <nav class="navbar navbar-expand-lg bg-white navbar-light shadoe-sm">
@@ -63,25 +79,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">SYARAT & KETENTUAN</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  PRODUK
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">KONSOL</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">AKSESORIS</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">GAME</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PRODUK</a>
               </li>
             </ul>
             <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control me-2" type="search" placeholder="Nama Produk" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">
                 <img src="gambar/gambar-search.png" alt="Search Icon" width="20" height="20">
               </button>
@@ -92,9 +95,20 @@
     </div>
   </section>
 
+  <!-- buat gambar home -->
+  <section class="position-relative">
+    <img src="gambar/main-game.jpeg" alt="" class="img-fluid w-100" style="object-fit: cover;">
+    <div class="overlay-text small">
+      <p>RENTAL AYO MAIN</p>
+    </div>
+    <div class="overlay-text large mt-5 fw-bold">
+      <p>PETUALANGAN MENANTI KITA</p>
+    </div>
+  </section>
+
 
   <!-- buat tampilan produk -->
-  <section style="background-color: #f2f2f2;">
+  <section class="mt-5" style="background-color: #f2f2f2;">
     <h1 style="text-align: center;"><strong>PRODUK UNGGULAN</strong></h1>
     <div class="container">
       <div class="row">
@@ -135,7 +149,8 @@
     </div>
   </section>
 
-  <section>
+  <!-- buat footer -->
+  <section class="mt-5">
     <footer>
       <div class="container">
         <div class="row">
@@ -152,7 +167,7 @@
             <!-- Informasi Kontak -->
             <h5>Informasi Kontak</h5>
             <p>
-              <img src="gambar/lokasi-logo.png" alt="Lokasi Icon" width="20" height="20"> Alamat: Jl Suramadu No.69<br>
+              <img src="gambar/lokasi-logo.png" alt="Lokasi Icon" width="20" height="20"> Alamat: Jl Jimbaran No.60<br>
               <img src="gambar/telpon-logo.png" alt="Telepon Icon" width="20" height="20"> Telpon/WA: +62 123 456 7769<br>
               <img src="gambar/mail-logo.png" alt="Email Icon" width="20" height="20"> Email: info@rentalayomain.com
             </p>
@@ -172,4 +187,5 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+
 </html>
