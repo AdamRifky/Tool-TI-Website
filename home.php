@@ -116,9 +116,9 @@
           <div class="card">
             <img src="gambar/ps5.png" class="card-img-top" alt="PS 5">
             <div class="card-body d-flex flex-column align-items-center">
-              <h5 class="card-title">KONSOL <br> PLAYSTATION 5</h5>
+              <h5 class="card-title"><br> PlayStation 5</h5>
               <p class="card-text">Rp. 250,000/Hari</p>
-              <a href="#" class="btn btn-dark mt-auto bg-black">LIHAT DETAIL</a>
+              <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
             </div>
           </div>
         </div>
@@ -126,9 +126,9 @@
           <div class="card">
             <img src="gambar/controller-ps5.webp" class="card-img-top" alt="PS 5">
             <div class="card-body d-flex flex-column align-items-center">
-              <h5 class="card-title">AKSESORIS <br> CONTROLLER PS 5</h5>
+              <h5 class="card-title"><br> Xbox series X</h5>
               <p class="card-text">Rp. 40,000/Hari</p>
-              <a href="#" class="btn btn-dark mt-auto bg-black">LIHAT DETAIL</a>
+              <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
             </div>
           </div>
         </div>
@@ -136,15 +136,15 @@
           <div class="card">
             <img src="gambar/game-fifa23.jpg" class="card-img-top" alt="PS 5">
             <div class="card-body d-flex flex-column align-items-center">
-              <h5 class="card-title">GAME <br> EA SPORTS™ FIFA 23</h5>
+              <h5 class="card-title"><br> Nintendo Switch</h5>
               <p class="card-text">Rp. 5,000/Hari</p>
-              <a href="#" class="btn btn-dark mt-auto bg-black">LIHAT DETAIL</a>
+              <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
             </div>
           </div>
         </div>
       </div>
       <div class="text-center mt-3">
-        <a href="#" class="btn btn-dark mt-auto bg-danger"><img src="gambar/pencarian-logo.png" style="height: 27px; width: 27px;" alt="detail"> Lihat Semua Produk</a>
+        <a href="produk.php" class="btn btn-dark mt-auto bg-danger"><img src="gambar/pencarian-logo.png" style="height: 27px; width: 27px;" alt="detail"> Lihat Semua Produk</a>
       </div>
     </div>
   </section>

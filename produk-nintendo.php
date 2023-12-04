@@ -82,7 +82,7 @@
             <div class="row">
                 <div class="col-2 offset-1" style="background-color: #dce0e6;">
                     <p class="fs-3 fw-bold" style="text-align: center;">Kategori</p>
-                    <a href="produk.php" class="fs-6 text-decoration-none text-dark">
+                    <a href="produk.php" class="fs-6 text-decoration-none text-dark text-opacity-75">
                         <p><img src="gambar/angle-right-icon.png" alt="" width="10%" style="margin-bottom: 5px;">Semua Produk</p>
                     </a>
                     <a href="produk-playstation.php" class="fs-6 text-decoration-none text-dark text-opacity-75">
@@ -91,103 +91,29 @@
                     <a href="produk-xbox.php" class="fs-6 text-decoration-none text-dark text-opacity-75">
                         <p><img src="gambar/angle-right-icon.png" alt="" width="10%" style="margin-bottom: 5px;">Xbox</p>
                     </a>
-                    <a href="produk-nintendo.php" class="fs-6 text-decoration-none text-dark text-opacity-75">
+                    <a href="produk-nintendo.php" class="fs-6 text-decoration-none text-dark">
                         <p><img src="gambar/angle-right-icon.png" alt="" width="10%" style="margin-bottom: 5px;">Nintendo</p>
                     </a>
                 </div>
                 <div class="col-8 px-5">
-                    <p class="fs-3 fw-bold" style="text-align: center;">Semua Produk</p>
-                    <div class="row items-center justify-content-center">
+                    <p class="fs-3 fw-bold" style="text-align: center;">Nintendo</p>
+                    <div class="row items-center justify-content-start">
                         <div class="col-4">
                             <div class="card">
                                 <img src="gambar/ps5.png" class="card-img-top" alt="PS 5">
-                                <div class="card-body d-flex flex-column align-items-center">
-                                    <h5 class="card-title"><br> PlayStation  3</h5>
-                                    <p class="card-text">Rp. 250,000/Hari</p>
-                                    <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <img src="gambar/controller-ps5.webp" class="card-img-top" alt="PS 5">
-                                <div class="card-body d-flex flex-column align-items-center">
-                                    <h5 class="card-title"><br> PlayStation  4</h5>
-                                    <p class="card-text">Rp. 40,000/Hari</p>
-                                    <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <img src="gambar/game-fifa23.jpg" class="card-img-top" alt="PS 5">
-                                <div class="card-body d-flex flex-column align-items-center">
-                                    <h5 class="card-title"><br> PlayStation  5</h5>
-                                    <p class="card-text">Rp. 5,000/Hari</p>
-                                    <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row items-center justify-content-center mt-3">
-                        <div class="col-4">
-                            <div class="card">
-                                <img src="gambar/ps5.png" class="card-img-top" alt="PS 5">
-                                <div class="card-body d-flex flex-column align-items-center">
-                                    <h5 class="card-title"><br> Xbox 360</h5>
-                                    <p class="card-text">Rp. 250,000/Hari</p>
-                                    <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <img src="gambar/controller-ps5.webp" class="card-img-top" alt="PS 5">
-                                <div class="card-body d-flex flex-column align-items-center">
-                                    <h5 class="card-title"><br> Xbox one</h5>
-                                    <p class="card-text">Rp. 40,000/Hari</p>
-                                    <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <img src="gambar/game-fifa23.jpg" class="card-img-top" alt="PS 5">
-                                <div class="card-body d-flex flex-column align-items-center">
-                                    <h5 class="card-title"><br> Xbox series X</h5>
-                                    <p class="card-text">Rp. 5,000/Hari</p>
-                                    <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row items-center justify-content-center mt-3">
-                        <div class="col-4">
-                            <div class="card">
-                                <img src="gambar/ps5.png" class="card-img-top" alt="PS 5">
-                                <div class="card-body d-flex flex-column align-items-center">
-                                    <h5 class="card-title"><br> Xbox series S</h5>
-                                    <p class="card-text">Rp. 250,000/Hari</p>
-                                    <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <img src="gambar/controller-ps5.webp" class="card-img-top" alt="PS 5">
                                 <div class="card-body d-flex flex-column align-items-center">
                                     <h5 class="card-title"><br> Nintendo Wii</h5>
-                                    <p class="card-text">Rp. 40,000/Hari</p>
+                                    <p class="card-text">Rp. 250,000/Hari</p>
                                     <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="card">
-                                <img src="gambar/game-fifa23.jpg" class="card-img-top" alt="PS 5">
+                                <img src="gambar/controller-ps5.webp" class="card-img-top" alt="PS 5">
                                 <div class="card-body d-flex flex-column align-items-center">
                                     <h5 class="card-title"><br> Nintendo Switch</h5>
-                                    <p class="card-text">Rp. 5,000/Hari</p>
+                                    <p class="card-text">Rp. 40,000/Hari</p>
                                     <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
                                 </div>
                             </div>
@@ -195,11 +121,10 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- buat footer -->
-    <section class="mt-5">
+    <section class="pt-5" style="margin-top: 110px;">
         <footer>
             <div class="container">
                 <div class="row">
