@@ -34,11 +34,14 @@ require "koneksi.php";
                     <button type="submit" class="btn btn-success btn-block mt-3 mb-3 form-control" name="tombolLogin">Sign in</button>
                 </form>
                 <div class="px-3">
+
+                    <!-- PHP LOGIN -->
                     <?php
                     if (isset($_POST['tombolLogin'])) {
                         $username = htmlspecialchars($_POST['username']);
                         $password = htmlspecialchars($_POST['password']);
 
+                        // Cek apakah pengguna adalah pegawai
                         $query = mysqli_query($koneksi, "SELECT * FROM tb_pegawai WHERE NAMA_PEGAWAI='$username'");
                         $hitungData = mysqli_num_rows($query);
                         $data = mysqli_fetch_array($query);
@@ -53,18 +56,36 @@ require "koneksi.php";
                                 <div class="alert alert-warning text-center" role="alert">
                                     Password Salah!
                                 </div>
-                            <?php
+                                <?php
                             }
                         } else {
-                            ?>
-                            <div class="alert alert-warning text-center" role="alert">
-                                Akun Tidak Tersedia!
-                            </div>
+                            // Jika pengguna bukan pegawai, cek apakah pengguna adalah pelanggan
+                            $query = mysqli_query($koneksi, "SELECT * FROM tb_pelanggan2 WHERE USERNAME='$username'");
+                            $hitungData = mysqli_num_rows($query);
+                            $data = mysqli_fetch_array($query);
+
+                            if ($hitungData > 0) {
+                                if ($password == $data['PASSWORDS']) {
+                                    $_SESSION['username'] = $data['USERNAME'];
+                                    $_SESSION['login'] = true;
+                                    header('location: home.php');
+                                } else {
+                                ?>
+                                    <div class="alert alert-warning text-center" role="alert">
+                                        Password Salah!
+                                    </div>
+                                <?php
+                                }
+                            } else {
+                                ?>
+                                <div class="alert alert-warning text-center" role="alert">
+                                    Akun Tidak Tersedia!
+                                </div>
                     <?php
+                            }
                         }
                     }
                     ?>
-                </div>
             </section>
         </section>
     </section>
