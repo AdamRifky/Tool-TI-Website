@@ -6,7 +6,7 @@ if ($_POST['action'] == 'add'){                //jika mode "add"
     $alamat = isset($_POST['KODE_DIVISI']) ? $_POST['KODE_DIVISI'] : '';
 
     $mysqli = new mysqli("localhost", "root", "", "ayo_main");
-    $query="INSERT INTO tb_pegawai VALUES('" . $id . "', '" . $nama . "', '" . $alamat . "', '');";
+    $query="INSERT INTO tb_pegawai VALUES('" . $id . "', '" . $nama . "', '" . $alamat . "');";
     
     echo $query;
     $result = $mysqli->query($query);
