@@ -37,8 +37,8 @@
                 </button>
                 <div class="collapse" id="orders-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="index.php?page=ordered" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Ordered</a></li>
-                        <li><a href="index.php?page=returned" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
+                        <li><a href="index.php?page=booking" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Ordered</a></li>
+                        <li><a href="index.php?page=pesanan" class="link-body-emphasis d-inline-flex text-decoration-none rounded">pesanan</a></li>
                     </ul>
                 </div>
             </li>
