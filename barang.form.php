@@ -9,6 +9,7 @@
     $nama = "";
     $harga = "";
     $stok = "";
+    $jumlah = "";
 
       if ($_GET['action']=="add"){
         $result = $mysqli->query("SELECT MAX(SUBSTRING(KODE_KONSOL, 9)) AS currentid FROM tb_barang;");
@@ -26,6 +27,7 @@
         $nama = "";
         $harga = "";
         $stok = "";
+        $jumlah = "";
       }
       else if ($_GET['action']=="edit"){
         $currentid = $_GET['KODE_KONSOL'];
@@ -40,7 +42,7 @@
         $nama = $row['NAMA_KONSOL'];
         $harga = $row['HARGA'];
         $stok = $row['STOK'];
-
+        $jumlah = $row['JUMLAH'];
 
       }
     
@@ -68,6 +70,10 @@
     <div class="mb-3">
       <label for="alamat" class="form-label">Stok</label>
       <input type="text" class="form-control" name="STOK" id="stok" placeholder="Tuliskan stok di sini" value="<?php echo $stok;?>">
+    </div>
+    <div class="mb-3">
+      <label for="alamat" class="form-label">Jumlah</label>
+      <input type="text" class="form-control" name="JUMLAH" id="jumlah" placeholder="Tuliskan jumlah di sini" value="<?php echo $jumlah;?>">
     </div>
     <input type="hidden" name="action" value="<?php echo $action;?>">
     <div class="d-grid gap-2 p-2 d-md-flex justify-content-md-end">

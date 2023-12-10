@@ -13,6 +13,7 @@
             <th>NAMA BARANG</th>
             <th>HARGA</th>
             <th>STOCK</th>
+            <th>JUMLAH</th>
             <th>ACTION</th>
         </tr>  
     <?php
@@ -32,6 +33,9 @@
         echo "</td>";
         echo "<td>";
         echo $row['STOK'];
+        echo "</td>";
+        echo "<td>";
+        echo $row['JUMLAH'];
         echo "</td>";
         echo "<td>";
             echo "<a class='btn btn-primary me-md-2 btn-sm' href='index.php?page=barang.form&KODE_KONSOL=".$row['KODE_KONSOL']."&action=edit'>Perbarui</a>";
