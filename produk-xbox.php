@@ -37,6 +37,15 @@
             height: 160px;
             width: 100%;
         }
+
+        .button {
+            display: inline-block;
+            padding: 7px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -48,7 +57,7 @@
             <nav class="navbar navbar-expand-lg bg-white navbar-light shadoe-sm">
                 <div class="container-fluid">
                     <img src="gambar/ayomain-logo-png.png" alt="" width="50" height="50">
-                    <a class="navbar-brand me-4" href="logo ayomain">AyoMain</a>
+                    <a class="navbar-brand me-4">AyoMain</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -64,12 +73,25 @@
                                 <a class="nav-link active" href="produk.php">PRODUK</a>
                             </li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Nama Produk" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">
-                                <img src="gambar/gambar-search.png" alt="Search Icon" width="20" height="20">
-                            </button>
-                        </form>
+                        <?php
+                        if (isset($_SESSION['username'])) {
+                        ?>
+                            <div class="dropdown">
+                                <button class="ms-3 button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="gambar/user-logo.png" alt="user" width="25px" height="25px">
+                                    <?php echo $_SESSION['username']; ?>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-white">
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item" href="logout.php">Sign out</a></li>
+                                </ul>
+                            </div>
+                        <?php } else {
+                        ?><a href="login.php" class="ms-3 button"><img src="gambar/user-logo.png" alt="user" width="25px" height="25px">
+                            <?php echo "Log in";
+                        }
+                            ?>
+                            </a>
                     </div>
                 </div>
             </nav>

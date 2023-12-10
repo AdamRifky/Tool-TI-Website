@@ -23,21 +23,13 @@ require "koneksi.php";
                         <div class="d-flex justify-content-center">
                             <img src="gambar/ayomain-logo-png.png" alt="" width="50" height="50">
                         </div>
-                        <h4 class="text-center font-weight-bold">Signup</h4>
+                        <h4 class="text-center font-weight-bold">Sign up</h4>
                         <label for="Inputuser1">Username</label>
                         <input type="text" class="form-control" name="username" id="Inputuser1" aria-describeby="usernameHelp" placeholder="Masukkan Username" required>
                     </div>
                     <div class="form-group">
                         <label for="InputPassword1">Password</label>
                         <input type="password" class="form-control" name="password" id=" InputPassword1" placeholder="Masukkan Password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="InputName">Nama Lengkap</label>
-                        <input type="text" class="form-control" name="nama" id=" InputName" placeholder="Masukkan Nama" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="InputEmail">Alamat Email</label>
-                        <input type="email" class="form-control" name="email" id=" InputEmail" placeholder="Masukkan Alamat Email" required>
                     </div>
                     <div class="form-group">
                         <label for="InputTelepon">Nomor Telepon</label>
@@ -47,7 +39,18 @@ require "koneksi.php";
                         <label for="InputRumah">Alamat Rumah</label>
                         <input type="text" class="form-control" name="rumah" id=" InputRumah" placeholder="Masukkan Alamat Rumah" required>
                     </div>
-                    <button type="submit" class="btn btn-success btn-block mt-3 mb-3 form-control" name="tombolSignup">Sign up</button>
+                    <button type="submit" class="btn btn-danger btn-block mt-3 mb-3 form-control" name="tombolSignup">Sign up</button>
+                    <div class="form-group">
+                        <p class="text-center">Sudah memiliki akun? <a href="login.php" style="color: red;">Masuk</a></p>
+                    </div>
+
+                    <hr class="line" />
+
+                    <div class="form-group">
+                        <button type="button" class="btn btn-secondary btn-block mt-3 mb-3 form-control" onclick="window.location.href='home.php'">
+                            Masuk Sebagai Guest
+                        </button>
+                    </div>
                 </form>
 
                 <?php
@@ -57,17 +60,15 @@ require "koneksi.php";
                     // Mendapatkan data dari form
                     $username = $koneksi->real_escape_string($_POST['username']);
                     $password = $koneksi->real_escape_string($_POST['password']);
-                    $email = $koneksi->real_escape_string($_POST['email']);
-                    $nama = $koneksi->real_escape_string($_POST['nama']);
                     $telepon = $koneksi->real_escape_string($_POST['telepon']);
                     $rumah = $koneksi->real_escape_string($_POST['rumah']);
 
                     // Query SQL untuk memasukkan data pengguna baru
-                    $sql = "INSERT INTO tb_pelanggan2 (NAMA_PELANGGAN, ALAMAT_RUMAH, NOMOR_TELEPON, USERNAME, PASSWORDS, EMAIL) VALUES (?, ?, ?, ?, ?, ?)";
+                    $sql = "INSERT INTO tb_pelanggan (NAMA_PELANGGAN, ALAMAT, NOMOR_TELEPON, PASSWORD) VALUES (?, ?, ?, ?)";
 
                     // Mempersiapkan dan mengeksekusi pernyataan
                     $stmt = $koneksi->prepare($sql);
-                    $stmt->bind_param("ssisss", $nama, $rumah, $telepon, $username, $password, $email);
+                    $stmt->bind_param("ssis", $username, $rumah, $telepon, $password);
                     $stmt->execute();
 
                     if ($stmt->error) {
@@ -80,10 +81,6 @@ require "koneksi.php";
                         // Mengatur $_SESSION untuk semua kolom
                         $_SESSION['username'] = $username;
                         $_SESSION['password'] = $password;
-                        $_SESSION['email'] = $email;
-                        $_SESSION['nama'] = $nama;
-                        $_SESSION['telepon'] = $telepon;
-                        $_SESSION['rumah'] = $rumah;
                     ?><div class="alert alert-success text-center mx-3 mb-3" role="alert">
                             Data Berhasil Ditambahkan!
                         </div><?php
