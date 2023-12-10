@@ -1,5 +1,5 @@
 <div class="d-grid gap-2 p-2 d-md-flex justify-content-md-end">
-      <a class="btn btn-primary me-md-2" href="index.php?page=customer.form&action=add" role="button">Tambah</a>
+      <a class="btn btn-primary me-md-2" href="index.php?page=barang.form&action=add" role="button">Tambah</a>
     </div>
     
     <?php 
@@ -34,9 +34,15 @@
         echo $row['STOK'];
         echo "</td>";
         echo "<td>";
-        echo "<a class='btn btn-primary me-md-2 btn-sm' href='index.php?page=customer.form&id_customer=".$row['KODE_KONSOL']."&action=edit'>Edit</a>";
-        echo "<a class='btn btn-danger me-md-2 btn-sm' href='customer.action.php?id_customer=".$row['KODE_KONSOL']."&action=delete'>Delete</a>";
-        echo "</td>";
+            echo "<a class='btn btn-primary me-md-2 btn-sm' href='index.php?page=barang.form&KODE_KONSOL=".$row['KODE_KONSOL']."&action=edit'>Perbarui</a>";
+            
+            // echo "<a class='btn btn-danger me-md-2 btn-sm' href='Pegawai.action.php?NIP=".$row['NIP']."&action=delete'>Delete</a>";
+            echo "<form action='barang.action.php' method='POST' style ='display:inline;'>";
+              echo "<input type='hidden' name='KODE_KONSOL' value='" . $row['KODE_KONSOL'] . "'>";
+              echo "<input type='hidden' name='action' value='delete'>";
+              echo "<button type='submit' class='btn btn-danger me-md-2 btn-sm' onclick='return confirm(\"Ingin menghapus data ini?\");'>Hapus</button>";
+            echo "</form>";
+          echo "</td>";
         
         echo "</tr>";
     }
