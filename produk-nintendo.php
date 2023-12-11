@@ -129,7 +129,7 @@ session_start();
                                 <img src="gambar/nintendowii.png" class="card-img-top" alt="PS 5">
                                 <div class="card-body d-flex flex-column align-items-center">
                                     <h5 class="card-title"><br> Nintendo Wii</h5>
-                                    <p class="card-text">Rp. 250,000/Hari</p>
+                                    <p class="card-text">Rp. 40,000/Hari</p>
                                     <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@ session_start();
                                 <img src="gambar/nintendoswitch.png" class="card-img-top" alt="PS 5">
                                 <div class="card-body d-flex flex-column align-items-center">
                                     <h5 class="card-title"><br> Nintendo Switch</h5>
-                                    <p class="card-text">Rp. 40,000/Hari</p>
+                                    <p class="card-text">Rp. 80,000/Hari</p>
                                     <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
                                 </div>
                             </div>

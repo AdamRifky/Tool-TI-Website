@@ -6,7 +6,7 @@
       $mysqli = new mysqli("localhost", "root", "", "ayo_main");
       $result = $mysqli->query("SELECT * from tb_Barang");
     ?>
-    <table class="table table-striped">
+    <table class="table table-info table-striped">
         <tr>
             <th>KODE BARANG</th>
             <th>ID MERK</th>
