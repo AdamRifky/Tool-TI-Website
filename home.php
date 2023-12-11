@@ -150,9 +150,9 @@ session_start();
         </div>
         <div class="col-4">
           <div class="card">
-            <img src="gambar/controller-ps5.webp" class="card-img-top" alt="PS 5">
+            <img src="gambar/xboxseriesS.png" class="card-img-top" alt="PS 5">
             <div class="card-body d-flex flex-column align-items-center">
-              <h5 class="card-title"><br> Xbox series X</h5>
+              <h5 class="card-title"><br> Xbox series S</h5>
               <p class="card-text">Rp. 40,000/Hari</p>
               <a href="#" class="btn btn-dark mt-auto bg-black form-control">ORDER</a>
             </div>
@@ -160,7 +160,7 @@ session_start();
         </div>
         <div class="col-4">
           <div class="card">
-            <img src="gambar/game-fifa23.jpg" class="card-img-top" alt="PS 5">
+            <img src="gambar/nintendoswitch.png" class="card-img-top" alt="PS 5">
             <div class="card-body d-flex flex-column align-items-center">
               <h5 class="card-title"><br> Nintendo Switch</h5>
               <p class="card-text">Rp. 5,000/Hari</p>

@@ -126,7 +126,7 @@ session_start();
                     <div class="row items-center justify-content-start">
                         <div class="col-4">
                             <div class="card">
-                                <img src="gambar/ps5.png" class="card-img-top" alt="PS 5">
+                                <img src="gambar/nintendowii.png" class="card-img-top" alt="PS 5">
                                 <div class="card-body d-flex flex-column align-items-center">
                                     <h5 class="card-title"><br> Nintendo Wii</h5>
                                     <p class="card-text">Rp. 250,000/Hari</p>
@@ -136,7 +136,7 @@ session_start();
                         </div>
                         <div class="col-4">
                             <div class="card">
-                                <img src="gambar/controller-ps5.webp" class="card-img-top" alt="PS 5">
+                                <img src="gambar/nintendoswitch.png" class="card-img-top" alt="PS 5">
                                 <div class="card-body d-flex flex-column align-items-center">
                                     <h5 class="card-title"><br> Nintendo Switch</h5>
                                     <p class="card-text">Rp. 40,000/Hari</p>

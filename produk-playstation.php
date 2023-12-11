@@ -126,7 +126,7 @@ session_start();
                     <div class="row items-center justify-content-center">
                         <div class="col-4">
                             <div class="card">
-                                <img src="gambar/ps5.png" class="card-img-top" alt="PS 5">
+                                <img src="gambar/ps3.png" class="card-img-top" alt="PS 5">
                                 <div class="card-body d-flex flex-column align-items-center">
                                     <h5 class="card-title"><br> PlayStation 3</h5>
                                     <p class="card-text">Rp. 250,000/Hari</p>
@@ -136,7 +136,7 @@ session_start();
                         </div>
                         <div class="col-4">
                             <div class="card">
-                                <img src="gambar/controller-ps5.webp" class="card-img-top" alt="PS 5">
+                                <img src="gambar/ps4.png" class="card-img-top" alt="PS 5">
                                 <div class="card-body d-flex flex-column align-items-center">
                                     <h5 class="card-title"><br> PlayStation 4</h5>
                                     <p class="card-text">Rp. 40,000/Hari</p>
@@ -146,7 +146,7 @@ session_start();
                         </div>
                         <div class="col-4">
                             <div class="card">
-                                <img src="gambar/game-fifa23.jpg" class="card-img-top" alt="PS 5">
+                                <img src="gambar/ps5.png" class="card-img-top" alt="PS 5">
                                 <div class="card-body d-flex flex-column align-items-center">
                                     <h5 class="card-title"><br> PlayStation 5</h5>
                                     <p class="card-text">Rp. 5,000/Hari</p>
