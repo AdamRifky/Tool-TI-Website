@@ -10,17 +10,15 @@ $tlp = "";
 $password = "";
 
 if ($_GET['action'] == "add") {
-    $result = $mysqli->query("SELECT MAX(SUBSTRING(ID_PELANGGAN, 9)) AS currentid FROM tb_pelanggan;");
-
+    $result = $mysqli->query("SELECT MAX(ID_PELANGGAN) AS currentid FROM tb_pelanggan;");
     if (!$result) {
         die("Error: " . $mysqli->error);
     }
 
     $row = $result->fetch_assoc(); //khusus single result
-    $max_number = (int)$row['currentid'];
-    $new_number = $max_number + 1;
+    
 
-    $currentid = sprintf("PLG-000-%02d", $new_number); //tambahkan dengan 1 untuk id baru
+    $currentid=$row['currentid']+1; //tambahkan dengan 1 untuk id baru
     $nama = "";
     $alamat = "";
     $tlp = "";

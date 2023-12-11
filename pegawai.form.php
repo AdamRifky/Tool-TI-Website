@@ -48,9 +48,19 @@
       <label for="nama" class="form-label">Nama</label>
       <input type="text" class="form-control" name="NAMA_PEGAWAI" id="nama" placeholder="Tuliskan nama di sini" value="<?php echo $nama;?>">
     </div>
-    <div class="mb-3">
+    <div class="form-group">
       <label for="alamat" class="form-label">DIVISI</label>
-      <input type="text" class="form-control" name="KODE_DIVISI" id="alamat" placeholder="Tuliskan kode divisi di sini" value="<?php echo $alamat;?>">
+      <select class="form-control" name="KODE_DIVISI" id="alamat" placeholder="Pilih divisi di sini">
+
+        <?php
+          $query = "SELECT KODE_DIVISI, NAMA_DIVISI FROM tb_divisi ORDER BY KODE_DIVISI";
+          $sqlnamasup = mysqli_query ($mysqli, $query);
+          while($hasil = mysqli_fetch_array($sqlnamasup)) {
+            $selected = ($hasil['KODE_DIVISI'] == $alamat) ? "selected" : "";
+            echo "<option value='" . $hasil['KODE_DIVISI'] . "' $selected>" . $hasil['NAMA_DIVISI'] . "</option>";
+          }
+        ?>
+      </select>
     </div>
     <input type="hidden" name="action" value="<?php echo $action;?>">
     <div class="d-grid gap-2 p-2 d-md-flex justify-content-md-end">

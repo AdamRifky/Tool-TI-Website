@@ -1,4 +1,4 @@
-<div class="d-grid gap-2 p-2 d-md-flex justify-content-md-end">
+<div class="d-grid gap-2 p-2 d-md-flex justify-content-md">
       <a class="btn btn-primary me-md-2" href="index.php?page=pegawai.form&action=add" role="button">Tambah</a>
     </div>
     
