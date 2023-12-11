@@ -1,5 +1,5 @@
 <div class="d-grid gap-2 p-2 d-md-flex justify-content-md-end">
-      <a class="btn btn-primary me-md-2" href="index.php?page=pegawai.form&action=add" role="button">Tambah</a>
+      <a class="btn btn-primary me-md-2" href="index.php?page=pesanan.form&action=add" role="button">Tambah</a>
     </div>
     
     <?php 
