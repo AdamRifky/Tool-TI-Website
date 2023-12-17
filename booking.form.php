@@ -27,16 +27,16 @@
       }
       else if ($_GET['action']=="edit"){
         $currentid = $_GET['ID_SEWA'];
-        $query = "SELECT * FROM tb_penyewaan_detail WHERE ID_SEWA = '".$currentid."';";
+        $query = "SELECT * FROM tb_penyewaan WHERE ID_SEWA = '".$currentid."';";
         
         //print_r($query);
         $result = $mysqli->query($query);
         $row = $result->fetch_assoc(); //khusus single result
         
         //print_r($row);
-        $currentcode = $row['KODE_KONSOL'];
-        $harga = $row['HARGA_SEWA'];
-        $status = $row['STATUS'];
+        $pelanggan = $row['ID_PELANGGAN'];
+        $sewa = $row['TANGGAL_SEWA'];
+        $kembali = $row['TANGGAL_KEMBALI'];
 
       }
     
