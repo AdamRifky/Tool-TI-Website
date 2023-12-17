@@ -1,5 +1,8 @@
 <?php
 require "session.php";
+if ($_SESSION['admin'] == false) {
+  header('location: home.php');
+}
 ?>
 
 <!doctype html>
