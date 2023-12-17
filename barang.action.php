@@ -9,7 +9,7 @@ if ($_POST['action'] == 'add'){                //jika mode "add"
     $jumlah = isset($_POST['JUMLAH']) ? $_POST['JUMLAH'] : '';
 
     $mysqli = new mysqli("localhost", "root", "", "ayo_main");
-    $query="INSERT INTO tb_barang VALUES('" . $kode . "', '" . $merk . "', '" . $nama . "', '" . $harga . "', '" . $stok . "');";
+    $query="INSERT INTO tb_barang VALUES('" . $kode . "', '" . $merk . "', '" . $nama . "', '" . $harga . "', '" . $stok . "', '" . $jumlah . "');";
     
     echo $query;
     $result = $mysqli->query($query);
@@ -20,7 +20,7 @@ if ($_POST['action'] == 'add'){                //jika mode "add"
 
     // $mysqli->query($query);
 
-    $mysqli->query($query);
+    //$mysqli->query($query);
 }
 else if ($_POST['action'] == 'edit'){
     $kode = $_POST['KODE_KONSOL'];

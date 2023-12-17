@@ -4,7 +4,7 @@
     $mysqli = new mysqli("localhost", "root", "", "ayo_main");
 
     $action=$_GET['action'];
-    $currentid = "";
+    $kode = "";
     $merk = "";
     $nama = "";
     $harga = "";
@@ -22,7 +22,7 @@
         $max_number = (int)$row['currentid'];
         $new_number = $max_number + 1;
         
-        $currentid = sprintf("KNL-000-%02d", $new_number); //tambahkan dengan 1 untuk id baru
+        $kode= sprintf("KNL-000-%02d", $new_number); //tambahkan dengan 1 untuk id baru
         $merk = "";
         $nama = "";
         $harga = "";
@@ -31,7 +31,7 @@
       }
       else if ($_GET['action']=="edit"){
         $currentid = $_GET['KODE_KONSOL'];
-        $query = "SELECT * FROM tb_barang WHERE KODE_KONSOL = '".$currentid."';";
+        $query = "SELECT * FROM tb_barang WHERE KODE_KONSOL = '".$kode."';";
         
         //print_r($query);
         $result = $mysqli->query($query);
@@ -51,7 +51,7 @@
   <form action="barang.action.php" method="POST">
     <div class="mb-3">
       <label for="id" class="form-label">KODE KONSOL</label>
-      <input type="text" class="form-control" name="KODE_KONSOL" id="KODE_KONSOL" placeholder="KODE_KONSOL" value="<?php echo $currentid;?>">
+      <input type="text" class="form-control" name="KODE_KONSOL" id="KODE_KONSOL" placeholder="KODE_KONSOL" value="<?php echo $kode;?>">
     </div>
     <div class="mb-3">
       <label for="nama" class="form-label">Id Merk</label>

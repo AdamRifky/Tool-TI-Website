@@ -1,40 +1,23 @@
 <?php
 
 if ($_POST['action'] == 'add'){                //jika mode "add"
-    $id = $_POST['ID_SEWA'];
-    $nama = isset($_POST['KODE_KONSOL']) ? $_POST['KODE_KONSOL'] : '';
-    // $harga = isset($_POST['KODE_DIVISI']) ? $_POST['KODE_DIVISI'] : '';
-    // $harga = 
+    $id = $_POST['NIP'];
+    $nama = isset($_POST['NAMA_PEGAWAI']) ? $_POST['NAMA_PEGAWAI'] : '';
+    $alamat = isset($_POST['KODE_DIVISI']) ? $_POST['KODE_DIVISI'] : '';
 
     $mysqli = new mysqli("localhost", "root", "", "ayo_main");
+    $query="INSERT INTO tb_pegawai VALUES('" . $id . "', '" . $nama . "', '" . $alamat . "');";
     
-    $query = "SELECT HARGA FROM tb_barang WHERE KODE_KONSOL = '$nama'";
+    echo $query;
     $result = $mysqli->query($query);
-
-    if ($result) {
-        $row = $result->fetch_assoc();
-        $harga = $row['HARGA'];
-
-        $query_insert = "INSERT INTO tb_penyewaan_detail VALUES ('" . $nama . "', '" . $harga . "', 'Masih Disewa', '" . $id . "')";
-        $result_insert = $mysqli->query($query_insert);
-
-        if (!$result_insert) {
-            die("Error: " . $mysqli->error);
-        }
-    } else {
+    
+    if (!$result) {
         die("Error: " . $mysqli->error);
     }
-    
-    // echo $query;
-    // $result = $mysqli->query($query);
-    
-    // if (!$result) {
-    //     die("Error: " . $mysqli->error);
-    // }
 
     // $mysqli->query($query);
 
-    // $mysqli->query($query);
+    $mysqli->query($query);
 }
 else if ($_POST['action'] == 'edit'){
     $id = $_POST['NIP'];
@@ -55,6 +38,6 @@ else if ($_POST['action'] == 'delete'){
     $result = $mysqli->query($query);
 }
 
-header('Location: index.php?page=pesanan');
+header('Location: index.php?page=pegawai');
 exit();
 ?>
