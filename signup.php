@@ -31,6 +31,10 @@ require "koneksi.php";
                         <input type="password" class="form-control" name="password" id=" InputPassword1" placeholder="Masukkan Password" required>
                     </div>
                     <div class="form-group">
+                        <label for="InputPassword11">Konfirmasi Password</label>
+                        <input type="password" class="form-control" name="password1" id=" InputPassword11" placeholder="Masukkan Password Ulang" required>
+                    </div>
+                    <div class="form-group">
                         <label for="InputTelepon">Nomor Telepon</label>
                         <input type="text" class="form-control" name="telepon" id=" InputTelepon" placeholder="Masukkan Nomor Telepon" required>
                     </div>
@@ -59,18 +63,23 @@ require "koneksi.php";
                     // Mendapatkan data dari form
                     $username = $koneksi->real_escape_string($_POST['username']);
                     $password = $koneksi->real_escape_string($_POST['password']);
+                    $password1 = $koneksi->real_escape_string($_POST['password1']);
+                    $epassword = password_hash($password, PASSWORD_DEFAULT);
+                    $epassword1 = password_hash($password1, PASSWORD_DEFAULT);
                     $telepon = $koneksi->real_escape_string($_POST['telepon']);
                     $rumah = $koneksi->real_escape_string($_POST['rumah']);
+                    
 
-                    // Query SQL untuk memasukkan data pengguna baru
-                    $sql = "INSERT INTO tb_pelanggan (NAMA_PELANGGAN, ALAMAT, NOMOR_TELEPON, PASSWORD) VALUES (?, ?, ?, ?)";
+                    if ($password == $password1) {
+                        // Query SQL untuk memasukkan data pengguna baru
+                        $sql = "INSERT INTO tb_pelanggan (NAMA_PELANGGAN, ALAMAT, NOMOR_TELEPON, PASSWORD) VALUES (?, ?, ?, ?)";
+                        // Mempersiapkan dan mengeksekusi pernyataan
+                        $stmt = $koneksi->prepare($sql);
+                        $stmt->bind_param("ssis", $username, $rumah, $telepon, $epassword);
+                        $stmt->execute();
+                    }
 
-                    // Mempersiapkan dan mengeksekusi pernyataan
-                    $stmt = $koneksi->prepare($sql);
-                    $stmt->bind_param("ssis", $username, $rumah, $telepon, $password);
-                    $stmt->execute();
-
-                    if ($stmt->error) {
+                    if ($password != $password1) {
                 ?>
                         <div class="alert alert-warning text-center" role="alert">
                             Masukkan Data Yang Benar!
@@ -85,7 +94,7 @@ require "koneksi.php";
                         </div><?php
                             }
 
-                            $stmt->close();
+                            
                             $koneksi->close();
                         }
                                 ?>

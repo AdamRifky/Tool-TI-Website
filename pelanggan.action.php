@@ -6,9 +6,10 @@ if ($_POST['action'] == 'add'){                //jika mode "add"
     $alamat = isset($_POST['ALAMAT']) ? $_POST['ALAMAT'] : '';
     $tlp = isset($_POST['NOMOR_TELEPON']) ? $_POST['NOMOR_TELEPON'] : '';
     $password = isset($_POST['PASSWORD']) ? $_POST['PASSWORD'] : '';
+    $epassword = password_hash($password, PASSWORD_DEFAULT);
 
     $mysqli = new mysqli("localhost", "root", "", "ayo_main");
-    $query="INSERT INTO tb_pelanggan VALUES('" . $id . "', '" . $nama . "', '" . $alamat . "', '" . $tlp . "', '" . $password . "');";
+    $query="INSERT INTO tb_pelanggan VALUES('" . $id . "', '" . $nama . "', '" . $alamat . "', '" . $tlp . "', '" . $epassword . "');";
     
     echo $query;
     $result = $mysqli->query($query);
@@ -19,7 +20,6 @@ if ($_POST['action'] == 'add'){                //jika mode "add"
 
     // $mysqli->query($query);
 
-    $mysqli->query($query);
 }
 else if ($_POST['action'] == 'edit'){
     $id = $_POST['ID_PELANGGAN'];
@@ -27,10 +27,10 @@ else if ($_POST['action'] == 'edit'){
     $alamat = isset($_POST['ALAMAT']) ? $_POST['ALAMAT'] : '';
     $tlp = isset($_POST['NOMOR_TELEPON']) ? $_POST['NOMOR_TELEPON'] : '';
     $password = isset($_POST['PASSWORD']) ? $_POST['PASSWORD'] : '';
-
+    $epassword = password_hash($password, PASSWORD_DEFAULT);
     
     $mysqli = new mysqli("localhost", "root", "", "ayo_main");
-    $query = "UPDATE tb_pelanggan SET NAMA_PELANGGAN='" . $nama . "', ALAMAT='" . $alamat . "',NOMOR_TELEPON='" . $tlp . "',PASSWORD='" . $password . "'WHERE ID_PELANGGAN='" . $id . "';";
+    $query = "UPDATE tb_pelanggan SET NAMA_PELANGGAN='" . $nama . "', ALAMAT='" . $alamat . "',NOMOR_TELEPON='" . $tlp . "',PASSWORD='" . $epassword . "'WHERE ID_PELANGGAN='" . $id . "';";
     
     $result = $mysqli->query($query);
 }

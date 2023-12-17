@@ -17,7 +17,7 @@ if ($_POST['action'] == 'add'){                //jika mode "add"
 
     // $mysqli->query($query);
 
-    $mysqli->query($query);
+
 }
 else if ($_POST['action'] == 'edit'){
     $id = $_POST['NIP'];
