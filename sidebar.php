@@ -29,8 +29,8 @@
                 </button>
                 <div class="collapse show" id="orders-collapse">
                     <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                        <li><a href="index.php?page=booking" class="link-body-emphasis d-inline-flex text-decoration-none rounded text-white">Ordered</a></li>
-                        <li><a href="index.php?page=pesanan" class="link-body-emphasis d-inline-flex text-decoration-none rounded text-white">pesanan</a></li>
+                        <li><a href="index.php?page=booking" class="link-body-emphasis d-inline-flex text-decoration-none rounded text-white">Booking</a></li>
+                        <li><a href="index.php?page=pesanan" class="link-body-emphasis d-inline-flex text-decoration-none rounded text-white">Penyewaan</a></li>
                     </ul>
                 </div>
             </li>
