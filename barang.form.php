@@ -53,9 +53,19 @@
       <label for="id" class="form-label">KODE KONSOL</label>
       <input type="text" class="form-control" name="KODE_KONSOL" id="KODE_KONSOL" placeholder="KODE_KONSOL" value="<?php echo $kode;?>">
     </div>
-    <div class="mb-3">
-      <label for="nama" class="form-label">Id Merk</label>
-      <input type="text" class="form-control" name="ID_MERK" id="merk" placeholder="Tuliskan id merk di sini" value="<?php echo $merk;?>">
+    <div class="form-group">
+      <label for="alamat" class="form-label">MERK</label>
+      <select class="form-control" name="ID_MERK" id="MERK" placeholder="Pilih divisi di sini">
+
+        <?php
+          $query = "SELECT ID_MERK, NAMA_MERK FROM tb_merk ORDER BY ID_MERK";
+          $sqlnamasup = mysqli_query ($mysqli, $query);
+          while($hasil = mysqli_fetch_array($sqlnamasup)) {
+            $selected = ($hasil['ID_MERK'] == $alamat) ? "selected" : "";
+            echo "<option value='" . $hasil['ID_MERK'] . "' $selected>" . $hasil['NAMA_MERK'] . "</option>";
+          }
+        ?>
+      </select>
     </div>
     <div class="mb-3">
     <div class="mb-3">
