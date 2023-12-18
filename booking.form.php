@@ -69,11 +69,11 @@
     </div>
     <div class="mb-3">
       <label for="sewa" class="form-label">Tanggal Sewa</label>
-      <input type="text" class="form-control" name="sewa" id="sewa" placeholder="tahun-bulan-tanggal" value="<?php echo $sewa;?>">
+      <input type="date" class="form-control" name="sewa" id="sewa" placeholder="tahun-bulan-tanggal" value="<?php echo $sewa;?>">
     </div>
     <div class="mb-3">
       <label for="kembali" class="form-label">Tanggal Kembali</label>
-      <input type="text" class="form-control" name="kembali" id="kembali" placeholder="tahun-bulan-tanggal" value="<?php echo $kembali;?>">
+      <input type="date" class="form-control" name="kembali" id="kembali" placeholder="tahun-bulan-tanggal" value="<?php echo $kembali;?>">
     </div>
     <input type="hidden" name="action" value="<?php echo $action;?>">
     <div class="d-grid gap-2 p-2 d-md-flex justify-content-md-end">
@@ -81,21 +81,5 @@
     </div>
   </form>
 
-  <script>
-  $( function() {
-    $( "#sewa" ).datepicker({
-        dateformat : "yyyy-mm-dd",
-        dateMonth : true,
-        dateYear : true
-    });
-  } );
-
-  $( function() {
-    $( "#kembali" ).datepicker({
-        dateformat : "yyyy-mm-dd",
-        dateMonth : true,
-        dateYear : true
-    });
-  } );
-  </script>
+  
 	</div>
