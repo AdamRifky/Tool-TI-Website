@@ -61,7 +61,7 @@ require "koneksi.php";
                     <?php
                     if (isset($_POST['tombolLogin'])) {
                         $username = htmlspecialchars($_POST['username']);
-                        $password = htmlspecialchars($_POST['password']);
+                        $password = ($_POST['password']);
 
                         $query = mysqli_query($koneksi, "SELECT * FROM tb_pegawai WHERE NAMA_PEGAWAI='$username'");
                         $hitungData = mysqli_num_rows($query);
@@ -71,6 +71,7 @@ require "koneksi.php";
                             if ($password == $data['NIP']) {
                                 $_SESSION['username'] = $data['NAMA_PEGAWAI'];
                                 $_SESSION['login'] = true;
+                                $_SESSION['admin'] = true;
                                 header('location: index.php');
                             } else {
                     ?>
@@ -85,12 +86,14 @@ require "koneksi.php";
                             $data = mysqli_fetch_array($query);
 
                             if ($hitungData > 0) {
-                                if ($password == $data['PASSWORD']) {
+
+                                if (password_verify($password, $data['PASSWORD'])) {
                                     $_SESSION['username'] = $data['NAMA_PELANGGAN'];
                                     $_SESSION['login'] = true;
                                     header('location: home.php');
                                 } else {
                                 ?>
+
                                     <div class="alert alert-warning text-center" role="alert">
                                         Password Salah!
                                     </div>

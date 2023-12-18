@@ -2,6 +2,14 @@
       <a class="btn btn-primary me-md-2" href="index.php?page=pelanggan.form&action=add" role="button">Tambah</a>
     </div>
     
+    <style>
+      td{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+      }
+    </style>
+    
     <?php 
       $mysqli = new mysqli("localhost", "root", "", "ayo_main");
       $result = $mysqli->query("SELECT * from tb_Pelanggan");
